@@ -1,14 +1,17 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import NavHeader from './Components/NavHeader';
-import ProductsPage from './Views/ProductsPage';
-import LandingPage from './Views/LandingPage';
+// import ProductsPage from './Views/ProductsPage';
 import CartView from './Views/CartView';
 import { createContext, useState } from 'react';
 import CheckoutView from './Views/CheckoutView';
 import Footer from './Components/Footer';
 import PlacedAlert from './Components/PlacedAlert';
+import LazyLoadLogo from './Components/LazyLoadLogo';
+const LazyProductPage = React.lazy(() => import('./Views/ProductsPage'));
+
 export const FoodContext = createContext();
 function App() {
   const [cart, setCart] = useState([]);
@@ -41,7 +44,7 @@ function App() {
     }
   }
   function handleDeleteProduct(prodId) {
-    console.log("handle function iin  App js" + prodId)
+    console.log('handle function iin  App js' + prodId);
     let newCart = cart.map((item, index) => {
       if (item.id === prodId) {
         return {};
@@ -55,18 +58,38 @@ function App() {
   return (
     <>
       <FoodContext.Provider value={{ cart, cartAddition, handleDeleteProduct }}>
-        <BrowserRouter basename='/'>
+        <BrowserRouter basename="/">
           <NavHeader />
           <Routes>
-           
-            <Route path="/" element={<ProductsPage />} />
-            <Route path="/Home" element={<ProductsPage />} />
-            <Route path="/Products" element={<ProductsPage />} />
+            <Route
+              path="/"
+              element={
+                <React.Suspense fallback={<LazyLoadLogo />}>
+                  <LazyProductPage />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/Home"
+              element={
+                <React.Suspense fallback={<LazyLoadLogo />}>
+                  <LazyProductPage />
+                </React.Suspense>
+              }
+            />
+            <Route
+              path="/Products"
+              element={
+                <React.Suspense fallback={<LazyLoadLogo />}>
+                  <LazyProductPage />
+                </React.Suspense>
+              }
+            />
             <Route path="/cart" element={<CartView />} />
-           
+
             <Route path="/Payment" element={<CheckoutView />} />
             <Route path="/OrderPlaced" element={<PlacedAlert />} />
-          
+            {/* <Route path="/lazyloadlogo" element={<LazyLoadLogo />} /> */}
           </Routes>
           <Footer />
         </BrowserRouter>
