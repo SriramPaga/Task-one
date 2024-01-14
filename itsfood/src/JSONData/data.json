@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "productName": "Masala Dosa",
+    "productDescription": "A crispy, savory crepe made from fermented rice and lentil batter, filled with a spicy potato and onion mixture. Served with sambar and coconut chutney.",
+    "price": 120,
+    "rating": 4.8,
+    "image": "dosa.jpeg"
+  },
+  {
+    "id": 2,
+    "productName": "Paneer Tikka Masala",
+    "productDescription": "Tender pieces of chicken marinated in yogurt and spices, grilled in a tandoor oven, and then simmered in a creamy tomato sauce.",
+    "price": 250,
+    "rating": 4.7,
+    "image": "paneertikka.jpeg"
+  },
+  {
+    "id": 3,
+    "productName": "Palak Paneer",
+    "productDescription": "A rich and flavorful curry made with  spinach, paneer (Indian cheese), and a blend of aromatic spices.",
+    "price": 180,
+    "rating": 4.9,
+    "image": "palakPaneer.webp"
+  },
+  {
+    "id": 4,
+    "productName": "Dal Makhani",
+    "productDescription": "A hearty lentil stew cooked with butter, cream, and a mix of spices, known for its smooth, creamy texture and rich flavor.",
+    "price": 150,
+    "rating": 4.6,
+    "image": "DalMakhni.webp"
+  },
+  {
+    "id": 5,
+    "productName": "Gulab Jamun",
+    "productDescription": "Soft, melt-in-your-mouth milk-based dumplings soaked in a sweet and fragrant rose-flavored syrup.",
+    "price": 80,
+    "rating": 5.0,
+    "image": "gulabjamun.jpeg"
+  },
+  {
+    "id": 6,
+    "productName": "Pizza",
+    "productDescription": "A classic Italian dish made with a crispy crust, tomato sauce, and melted cheese.",
+    "price": 120.99,
+    "rating": 4.5,
+    "image": "pizza.jpeg"
+  },
+  {
+    "id": 7,
+    "productName": "Pasta",
+    "productDescription": "A versatile dish made with noodles and a variety of sauces.",
+    "price": 90.99,
+    "rating": 4.2,
+    "image": "pasta.jpeg"
+  },
+  {
+    "id": 8,
+    "productName": "Salad",
+    "productDescription": "A healthy and refreshing mix of greens, vegetables, and dressing.",
+    "price": 70.99,
+    "rating": 4.0,
+    "image": "salad.jpeg"
+  },
+  {
+    "id": 9,
+    "productName": "Sushi",
+    "productDescription": "Japanese dish of vinegared rice topped with seafood or vegetables.",
+    "price": 140.99,
+    "rating": 4.8,
+    "image": "sushi.jpeg"
+  },
+  {
+    "id": 10,
+    "productName": "Burger",
+    "productDescription": "A juicy patty of ground meat sandwiched between a bun.",
+    "price": 80.99,
+    "rating": 4.3,
+    "image": "burger.jpg"
+  }
+]
